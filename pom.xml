@@ -1,0 +1,175 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.amplience</groupId>
+  <artifactId>github-api-testing</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>github-api-testing</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <cucumber.version>1.2.4</cucumber.version>
+    <java.version>8</java.version>
+  </properties>
+
+  <dependencies>
+  	<dependency>
+    	<groupId>net.masterthought</groupId>
+    	<artifactId>maven-cucumber-reporting</artifactId>
+    	<version>3.8.0</version>
+    </dependency>
+    <dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>cucumber-core</artifactId>
+    <version>1.2.5</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-html -->
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>cucumber-html</artifactId>
+    <version>0.2.6</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>1.2.5</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>1.2.5</version>
+    <scope>test</scope>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-jvm-deps -->
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>cucumber-jvm-deps</artifactId>
+    <version>1.0.5</version>
+    <scope>provided</scope>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/info.cukes/gherkin -->
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>gherkin</artifactId>
+    <version>2.12.2</version>
+    <scope>provided</scope>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
+</dependency>
+	<dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>3.4.0</version>
+    </dependency> 
+    <dependency>
+      <groupId>info.cukes</groupId>
+      <artifactId>cucumber-java8</artifactId>
+      <version>${cucumber.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+<dependency> 
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>4.3.10.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-beans</artifactId>
+    <version>4.3.10.RELEASE</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-spring -->
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>cucumber-spring</artifactId>
+    <version>1.2.5</version>
+    <scope>test</scope>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>4.3.10.RELEASE</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-test</artifactId>
+    <version>4.3.10.RELEASE</version>
+    <scope>test</scope>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>1.7.25</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-log4j12</artifactId>
+    <version>1.7.25</version>
+    <scope>test</scope>
+</dependency>
+    
+  </dependencies>
+  
+  
+  <build>
+  <plugins>
+  <plugin>
+        <groupId>net.masterthought</groupId>
+        <artifactId>maven-cucumber-reporting</artifactId>
+        <version>3.7.0</version>
+        <executions>
+          <execution>
+            <id>execution</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <projectName>github-api-testing</projectName>
+              <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
+              <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+              <skippedFails>true</skippedFails>
+              <enableFlashCharts>false</enableFlashCharts>
+              <buildNumber>42</buildNumber>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version>
+        <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.18.1</version>
+        <configuration>
+          <testFailureIgnore>true</testFailureIgnore>
+          <includes>
+            <exclude>**/*RunTest.java</exclude>
+          </includes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+</project>

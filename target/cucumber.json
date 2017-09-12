@@ -1,0 +1,440 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "The GitHub API returns the correct values for a specified user",
+        "description": "",
+        "id": "testing-the-github-api-and-frontend;the-github-api-returns-the-correct-values-for-a-specified-user",
+        "after": [
+          {
+            "result": {
+              "duration": 7349339,
+              "status": "passed"
+            },
+            "match": {
+              "location": "FrontendSteps.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1186474722,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the github public users API receives a GET request for the user \"6wl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6wl",
+                  "offset": 65
+                }
+              ],
+              "location": "BackendSteps.the_github_public_users_api_receives_a_get_request_for_the_user_x(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 879064,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "a HTTP response of \"200\" is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "BackendSteps.a_http_response_of_x_is_received(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 183944,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the JSON response contains the field \"name\" with a value of \"Gregory Loscombe\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "name",
+                  "offset": 38
+                },
+                {
+                  "val": "Gregory Loscombe",
+                  "offset": 61
+                }
+              ],
+              "location": "BackendSteps.the_json_response_contains_the_field_x_with_a_value_of_y(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 183433,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the JSON response contains the field \"id\" with a value of \"15330\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "id",
+                  "offset": 38
+                },
+                {
+                  "val": "15330",
+                  "offset": 59
+                }
+              ],
+              "location": "BackendSteps.the_json_response_contains_the_field_x_with_a_value_of_y(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 133462,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the JSON response contains the field \"company\" with a value of \"Amplience\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "company",
+                  "offset": 38
+                },
+                {
+                  "val": "Amplience",
+                  "offset": 64
+                }
+              ],
+              "location": "BackendSteps.the_json_response_contains_the_field_x_with_a_value_of_y(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 130546,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the JSON response contains the field \"location\" with a value of \"London\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "location",
+                  "offset": 38
+                },
+                {
+                  "val": "London",
+                  "offset": 65
+                }
+              ],
+              "location": "BackendSteps.the_json_response_contains_the_field_x_with_a_value_of_y(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 124897,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the JSON response contains the field \"public_repos\" with a value of \"4\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "public_repos",
+                  "offset": 38
+                },
+                {
+                  "val": "4",
+                  "offset": 69
+                }
+              ],
+              "location": "BackendSteps.the_json_response_contains_the_field_x_with_a_value_of_y(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 139693,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the JSON response contains the field \"public_gists\" with a value of \"10\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "public_gists",
+                  "offset": 38
+                },
+                {
+                  "val": "10",
+                  "offset": 69
+                }
+              ],
+              "location": "BackendSteps.the_json_response_contains_the_field_x_with_a_value_of_y(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 214042,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the JSON response contains the field \"followers\" with a value of \"12\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "followers",
+                  "offset": 38
+                },
+                {
+                  "val": "12",
+                  "offset": 66
+                }
+              ],
+              "location": "BackendSteps.the_json_response_contains_the_field_x_with_a_value_of_y(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 232791,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the JSON response contains the field \"following\" with a value of \"20\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "following",
+                  "offset": 38
+                },
+                {
+                  "val": "20",
+                  "offset": 66
+                }
+              ],
+              "location": "BackendSteps.the_json_response_contains_the_field_x_with_a_value_of_y(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@test"
+          }
+        ]
+      },
+      {
+        "line": 17,
+        "name": "The values returned from the GitHub API match the values shown on the webpage for a specified user",
+        "description": "",
+        "id": "testing-the-github-api-and-frontend;the-values-returned-from-the-github-api-match-the-values-shown-on-the-webpage-for-a-specified-user",
+        "after": [
+          {
+            "result": {
+              "duration": 470607683,
+              "status": "passed"
+            },
+            "match": {
+              "location": "FrontendSteps.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 133102078,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the github public users API receives a GET request for the user \"6wl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6wl",
+                  "offset": 65
+                }
+              ],
+              "location": "BackendSteps.the_github_public_users_api_receives_a_get_request_for_the_user_x(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 293824,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "a HTTP response of \"200\" is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "BackendSteps.a_http_response_of_x_is_received(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4460800768,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the webpage value for \"name\" matches the corresponding JSON value received in the API response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "name",
+                  "offset": 23
+                }
+              ],
+              "location": "FrontendSteps.the_webpage_value_for_x_matches_the_corresponding_JSON_value_received_in_the_API_response(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 91281230,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the webpage value for \"company\" matches the corresponding JSON value received in the API response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "company",
+                  "offset": 23
+                }
+              ],
+              "location": "FrontendSteps.the_webpage_value_for_x_matches_the_corresponding_JSON_value_received_in_the_API_response(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 97136808,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the webpage value for \"location\" matches the corresponding JSON value received in the API response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "location",
+                  "offset": 23
+                }
+              ],
+              "location": "FrontendSteps.the_webpage_value_for_x_matches_the_corresponding_JSON_value_received_in_the_API_response(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 75577230,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the webpage value for \"public_repos\" matches the corresponding JSON value received in the API response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "public_repos",
+                  "offset": 23
+                }
+              ],
+              "location": "FrontendSteps.the_webpage_value_for_x_matches_the_corresponding_JSON_value_received_in_the_API_response(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1153762614,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the webpage value for \"public_gists\" matches the corresponding JSON value received in the API response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "public_gists",
+                  "offset": 23
+                }
+              ],
+              "location": "FrontendSteps.the_webpage_value_for_x_matches_the_corresponding_JSON_value_received_in_the_API_response(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 865523258,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the webpage value for \"followers\" matches the corresponding JSON value received in the API response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "followers",
+                  "offset": 23
+                }
+              ],
+              "location": "FrontendSteps.the_webpage_value_for_x_matches_the_corresponding_JSON_value_received_in_the_API_response(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 72086821,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the webpage value for \"following\" matches the corresponding JSON value received in the API response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "following",
+                  "offset": 23
+                }
+              ],
+              "location": "FrontendSteps.the_webpage_value_for_x_matches_the_corresponding_JSON_value_received_in_the_API_response(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 16,
+            "name": "@test"
+          }
+        ]
+      }
+    ],
+    "name": "Testing the GitHub API and frontend",
+    "description": "",
+    "id": "testing-the-github-api-and-frontend",
+    "keyword": "Feature",
+    "uri": "features/TestGitAPI.feature"
+  }
+]
